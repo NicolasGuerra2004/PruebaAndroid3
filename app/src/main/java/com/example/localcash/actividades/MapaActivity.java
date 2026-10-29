@@ -18,7 +18,6 @@ public class MapaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Configuración obligatoria de osmdroid antes de inflar la vista
         Context ctx = getApplicationContext();
         Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
         Configuration.getInstance().setUserAgentValue(getPackageName());
@@ -29,7 +28,6 @@ public class MapaActivity extends AppCompatActivity {
         map.setTileSource(TileSourceFactory.MAPNIK);
         map.setMultiTouchControls(true);
 
-        // Centrar el mapa por defecto (por ejemplo, en Santiago, Chile)
         GeoPoint startPoint = new GeoPoint(-33.4489, -70.6693);
         map.getController().setZoom(15.0);
         map.getController().setCenter(startPoint);

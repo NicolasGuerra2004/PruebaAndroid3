@@ -39,7 +39,7 @@ public class ComprasActivity extends AppCompatActivity {
         if(montoTexto.isEmpty()) montoTexto = "0";
         valores.put("monto", Double.parseDouble(montoTexto));
         valores.put("fecha", etFechaCompra.getText().toString());
-        valores.put("es_programada", 1); // Compra agendada/programada
+        valores.put("es_programada", 1);
 
         long idResultante = db.insert("compras", null, valores);
         if (idResultante != -1) {

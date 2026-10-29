@@ -32,18 +32,16 @@ public class DeudasContactosActivity extends AppCompatActivity {
     private void guardarContactoYDeuda() {
         SQLiteDatabase db = conexion.getWritableDatabase();
 
-        // 1. Guardar el contacto en la agenda local
         ContentValues valContacto = new ContentValues();
         valContacto.put("nombre", etNombreContacto.getText().toString());
         long idContacto = db.insert("contactos", null, valContacto);
 
-        // 2. Guardar la deuda asociada
         String montoTexto = etMontoDeuda.getText().toString();
         if(montoTexto.isEmpty()) montoTexto = "0";
 
         if (idContacto != -1) {
             ContentValues valDeuda = new ContentValues();
-            valDeuda.put("id_compra", 1); // Referencia base
+            valDeuda.put("id_compra", 1);
             valDeuda.put("id_contacto", idContacto);
             valDeuda.put("monto_adeudado", Double.parseDouble(montoTexto));
 
