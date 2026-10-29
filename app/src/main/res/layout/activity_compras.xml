@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <EditText
+        android:id="@+id/etDescripcionCompra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción del producto o compra" />
+
+    <EditText
+        android:id="@+id/etMontoCompra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Monto estimado" />
+
+    <EditText
+        android:id="@+id/etFechaCompra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha (ej. 2026-11-15)" />
+
+    <Button
+        android:id="@+id/btnGuardarCompra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Guardar y Agendar Compra" />
+</LinearLayout>
